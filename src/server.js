@@ -4,12 +4,14 @@ import cors from "cors"
 
 import router from "./routes/index.js"
 
+const server = express()
+server.use(cors())
 dotenv.config()
 
-const server = express()
+
 server.use(express.json())
 server.use(router)
-server.use(cors())
+
 
 
 server.listen(process.env.PORT, () => {
