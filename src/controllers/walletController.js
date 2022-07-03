@@ -4,7 +4,7 @@ import joi from "joi"
 export async function solicitarDados(req, res) {
     const carteiraDados = await db.collection("carteiraDados").find({ userId: res.locals.userId }).toArray()
 
-    res.send(carteiraDados)
+    res.send(carteiraDados.reverse())
 }
 
 export async function adicionarDados(req, res) {
