@@ -5,14 +5,7 @@ import cors from "cors"
 import router from "./routes/index.js"
 
 const server = express()
-
-const corsOptions ={
-    origin:'*', 
-    credentials:true,            
-    optionSuccessStatus:200,
-}
-
-server.use(cors(corsOptions))
+server.use(cors())
 
 dotenv.config()
 
